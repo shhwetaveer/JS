@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random</title>
+    <link rel="stylesheet" type="text/css" href="random.css">
+</head>
+<body>
+    <div id="container">
+        <br><br>
+    <h2>Random Number Generator</h2><br><br>
+    <button id="generate" class="btn">Generate</button><br><br>
+    <div id ='btn'><br>
+    <label id="random1">0</label><br><br>
+    <label id="random2">0</label><br><br>
+    <label id="random3">0</label><br><br>
+</div></div>
+    <script>
+        const gen = document.getElementById('generate');
+const num1 = document.getElementById('random1');
+const num2 = document.getElementById('random2');
+const num3 = document.getElementById('random3');
+const min =1;
+const max =6;
+let random1;
+let random2;
+let random3;
+gen.onclick = function(){
+    random1 = Math.floor(Math.random()*max)+min;
+    random2 = Math.floor(Math.random()*max)+min;
+    random3 = Math.floor(Math.random()*max)+min;
+num1.textContent = random1;
+num2.textContent = random2;
+num3.textContent = random3;
+}
+    </script>
+</body>
+</html>
