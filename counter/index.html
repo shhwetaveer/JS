@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #counter{
+    font-size: 10em;
+    text-align: center;
+    display: block;
+}
+#container{
+    align-items: center;
+    text-align: center;
+}
+
+.btn{
+    padding: 10px 20px;
+    font-size: 2em;
+    color: aquamarine;
+    background-color:indianred;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+.btn.hover{
+
+    background-color:hotpink;}
+    </style>
+</head>
+<body>
+    <h2>Number Counters</h2>
+    <label id="counter">0</label>
+    <div id = "container">
+        <button id ="increase" class="btn">Increase</button>
+        <button id ="reset" class="btn">Reset</button>
+        <button id ="decrease" class="btn">Decrease</button>    
+    </div>
+    <script>
+        const inc = document.getElementById('increase');
+const dec = document.getElementById('decrease');
+const res = document.getElementById('reset');
+const  counter = document.getElementById('counter');
+let count = 0;
+counter.textContent = count;
+
+inc.onclick = function(){
+    count++;
+    counter.textContent = count;
+}
+dec.onclick = function(){
+    count--;
+    counter.textContent = count;
+}
+res.onclick = function(){
+    count = 0;
+    counter.textContent = count;
+}
+    </script>
+</body>
+</html>
